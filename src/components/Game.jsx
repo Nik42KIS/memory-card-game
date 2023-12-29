@@ -1,11 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-const Game = ({cards}) => {
+const Game = ({ cards }) => {
   return (
     <ul>
-        { cards.map(card => <li key = {card.name}>{card.name}</li>)}
+      {cards.map((card) => {
+      return  (
+      <li key={card.id}>
+            <img src={card.images.original.url} alt='' />
+        </li>
+        )
+      })}
     </ul>
-  )
-}
+  );
+};
 
-export default Game
+export default Game;

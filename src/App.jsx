@@ -5,8 +5,8 @@ import './App.css';
 import Count from './components/Count';
 import Game from './components/Game';
 
-const BASE_URL = 'https://pokeapi.co/api/v2/pokemon';
-
+const BASE_URL = 'https://api.giphy.com/v1/gifs/trending?api_key=wEcH0ljpto42JAT5uUammPVhSHykK88c&limit=20&offset=0&rating=g&bundle=messaging_non_clips';
+const API_KEY = 'wEcH0ljpto42JAT5uUammPVhSHykK88c'
 function App() {
   const [cards, setCards] = useState([]);
 
@@ -14,7 +14,7 @@ function App() {
     async function getCards() {
       const response = await fetch(BASE_URL);
       const result = await response.json();
-      setCards(result.results);
+      setCards(result.data);
     }
     // return setCards({})
     getCards();
