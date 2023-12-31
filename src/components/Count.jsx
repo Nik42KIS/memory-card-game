@@ -1,9 +1,10 @@
-import React from 'react'
 
+import '../App.css'
 const Count = () => {
   return (
-    <div>
-        
+    <div className='score'>
+        <div className='best_score'>Best score: <span></span></div>
+        <div className='current_score'>Current score: <span></span></div>
     </div>
   )
 }
