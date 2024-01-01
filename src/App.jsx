@@ -7,6 +7,7 @@ const BASE_URL = 'https://api.giphy.com/v1/gifs/trending?api_key=wEcH0ljpto42JAT
 // const API_KEY = 'wEcH0ljpto42JAT5uUammPVhSHykK88c'
 function App() {
   const [cards, setCards] = useState([]);
+  const [count, setCount] = useState(0)
 
   useEffect(() => {
     async function getCards() {
@@ -20,8 +21,8 @@ function App() {
   console.log(cards);
   return (
     <div className='container'>
-      <Count />
-      <Game cards={cards} />
+      <Count count = {count} />
+      <Game setCount = {setCount} cards={cards} />
     </div>
   );
 }
