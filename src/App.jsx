@@ -22,7 +22,7 @@ function App() {
   return (
     <div className='container'>
       <header>
-      <span className='rules'>Get points by clicking on an image but don't click on any more than once!</span>
+      <span className='rules'>Get points by clicking on an GIF but don't click on any more than once!</span>
       <Count record = {record} count = {count} />
       </header>
       <Game setCards = {setCards} record = {record} count = {count} setRecord = {setRecord} setCount = {setCount} cards={cards} />
