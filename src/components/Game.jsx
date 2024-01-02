@@ -16,6 +16,7 @@ const Game = ({ cards, setCards, setRecord, record, count,  setCount }) => {
     if(record < count){
       setRecord(count)
     }
+    document.querySelectorAll('.list_item').forEach(item => item.classList.remove('checked') )
     setCount(0)
   }
 

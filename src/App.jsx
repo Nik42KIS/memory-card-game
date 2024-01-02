@@ -3,7 +3,7 @@ import './App.css';
 import Count from './components/Count';
 import Game from './components/Game';
 
-const BASE_URL = 'https://api.giphy.com/v1/gifs/trending?api_key=wEcH0ljpto42JAT5uUammPVhSHykK88c&limit=20&offset=0&rating=g&bundle=messaging_non_clips';
+const BASE_URL = 'https://api.giphy.com/v1/gifs/trending?api_key=wEcH0ljpto42JAT5uUammPVhSHykK88c&limit=12&offset=0&rating=g&bundle=messaging_non_clips';
 // const API_KEY = 'wEcH0ljpto42JAT5uUammPVhSHykK88c'
 function App() {
   const [cards, setCards] = useState([]);
@@ -21,7 +21,10 @@ function App() {
   console.log(cards);
   return (
     <div className='container'>
+      <header>
+      <span className='rules'>Get points by clicking on an image but don't click on any more than once!</span>
       <Count record = {record} count = {count} />
+      </header>
       <Game setCards = {setCards} record = {record} count = {count} setRecord = {setRecord} setCount = {setCount} cards={cards} />
     </div>
   );

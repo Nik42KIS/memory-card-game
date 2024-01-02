@@ -18,11 +18,17 @@
  
 }
 .list_item img{
-  height: 300px;
-  width: 300px;
+  height: 350px;
+  width: 350px;
 }
-
-.score{
+header{
+  display: flex;
+  justify-content: space-evenly;
+  align-item:center;
+  padding-top:7px;
+  background-color: #fdfdfd53;
+}
+.score, .rules{
   font-size: 2rem;
   text-align: center;
 }
